@@ -14,11 +14,11 @@
       <nav>
         <% if user_signed_in? %>
           <strong><%= link_to current_user.username, users_show_path %></strong>
-          <% link_to 'プロフィール変更', edit_user_registration_path %>
-          <% link_to 'ろぐあうと', destroy_user_session_path, method: :delete %>
+          <%= link_to 'プロフィール変更', edit_user_registration_path %>
+          <%= link_to 'ろぐあうと', destroy_user_session_path, method: :delete %>
         <% else %>
-          <% link_to 'とーろく', new_user_registration_path %>
-          <% link_to "ろぐいん", new_user_session_path %>
+          <%= link_to 'とーろく', new_user_registration_path %>
+          <%= link_to "ろぐいん", new_user_session_path %>
         <% end %>
       </nav>
     </header>
